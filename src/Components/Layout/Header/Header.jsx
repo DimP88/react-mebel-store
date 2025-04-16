@@ -1,6 +1,6 @@
 import HeaderTop from "./HeaderTop/HeaderTop";
 import HeaderCenter from "./HeaderCenter/HeaderCenter";
-import Headerdown from "./HeaderDown/HeaderDown";
+import HeaderDown from "./HeaderDown/HeaderDown";
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
       <HeaderTop />
       <div className="container">
         <HeaderCenter />
-        <Headerdown />
+        <HeaderDown />
       </div>
     </div>
   );
