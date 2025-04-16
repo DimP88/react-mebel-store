@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "../../../Icon/Icon";
 
-const Headerdown = () => {
+const HeaderDown = () => {
   return (
     <div>
       <div className="header__down">
@@ -31,4 +31,4 @@ const Headerdown = () => {
   );
 };
 
-export default Headerdown;
+export default HeaderDown;
