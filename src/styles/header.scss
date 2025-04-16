@@ -41,6 +41,21 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    flex-wrap: wrap;
+    @media (max-width: 785px) {
+      &-search {
+        min-width: 100%;
+        order: 1;
+      }
+      &-logo {
+        margin-right: auto;
+        margin-bottom: 10px;
+      }
+      &-acc {
+        margin-left: auto;
+        margin-bottom: 10px;
+      }
+    }
 
     &-acc {
       display: flex;
@@ -56,6 +71,7 @@
       width: 75%;
       position: relative;
     }
+
     &-glass {
       position: absolute;
       top: 50%;

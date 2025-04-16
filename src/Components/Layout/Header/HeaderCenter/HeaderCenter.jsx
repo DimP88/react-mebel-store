@@ -21,7 +21,12 @@ const HeaderCenter = () => {
   return (
     <div className="header__center">
       <Link to="/">
-        <img src={logo} alt="Логотип" title="На главную" />
+        <img
+          className="header__center-logo"
+          src={logo}
+          alt="Логотип"
+          title="На главную"
+        />
       </Link>
 
       <div className="header__center-search">

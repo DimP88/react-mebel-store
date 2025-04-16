@@ -1,33 +1,48 @@
 .card {
-  width: calc(25% - 22.5px);
-  padding: 74px 20px 20px;
   position: relative;
-  overflow: visible; // Разрешаем выход элементов за границы карточки
+  padding: 74px 20px 20px;
+  background: #fff;
+  overflow: visible;
   z-index: 1;
   transition: all 0.3s ease;
-  background: #fff;
+  margin-bottom: 30px;
+
+  @media (min-width: 568px) {
+    width: calc(50% - 15px);
+  }
+
+  @media (min-width: 768px) {
+    width: calc(33.333% - 20px);
+  }
+
+  @media (min-width: 1100px) {
+    width: calc(25% - 22.5px);
+  }
 
   &:hover {
     transform: scale(1.05);
     z-index: 10;
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1); // Мягкая тень внутри карточки
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
 
     .card__sizes {
-      top: 300px;
+      top: 100%;
       opacity: 1;
       visibility: visible;
-      transform: translate(-50%, 0);
     }
   }
 
+  // Элементы карточки
   &__img {
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
   }
 
   &__category {
-    font-size: 11px;
+    font-size: 0.6875rem; // 11px
     padding: 6px 0 9px;
+    color: var(--text-secondary);
   }
 
   &__fav {
@@ -35,57 +50,57 @@
     top: 25px;
     right: 25px;
     cursor: pointer;
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease;
+
     &:hover {
       transform: scale(1.3);
     }
   }
 
+  // Блок размеров
   &__sizes {
     position: absolute;
-    top: calc(100% + 10px); // Отступ от карточки
-    left: 50%;
+    top: calc(100% + 10px);
+    left: 0;
     width: 100%;
     background: white;
     padding: 15px;
     opacity: 0;
     visibility: hidden;
-    transform: translate(-50%, 0);
     z-index: 20;
-    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1); // Мягкая тень внутри карточки
-    transition: all 0.3s ease; // Плавный переход
-    clip-path: inset(0 -10px -10px -10px); // Обрезаем тень по краям
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    clip-path: inset(0 -10px -10px -10px);
   }
 
   &__sizes-info {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     padding: 10px 0 15px;
   }
 
   &__sizes-size {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    font-size: 9px;
+    align-items: center;
+    font-size: 0.5625rem; // 9px
 
     span {
-      font-size: 9px;
-      color: #c4c4c4;
+      color: var(--text-tertiary);
     }
   }
 
   &__sizes-btn {
-    background: var(--main-color);
-    font-size: 13px;
-    color: #fff;
-    padding: 12px 40px;
+    display: block;
     width: 100%;
+    padding: 12px 0;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 0.8125rem; // 13px
+    text-align: center;
     cursor: pointer;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.3s ease;
+
     &:hover {
       background-color: var(--lightmain-color);
     }
@@ -95,20 +110,21 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    column-gap: 20px;
+    gap: 20px;
+    margin-top: 10px;
   }
 
   &__sizes-btnsmall {
-    background-color: var(--main-color);
     padding: 5px 12px;
+    background-color: var(--main-color);
     color: var(--white-color);
     font-weight: 600;
-    font-size: 20px;
-    transform: scale(1.05);
-    transition: background-color 0.4s ease, transform 0.3s ease;
+    font-size: 1.25rem; // 20px
+    transition: all 0.3s ease;
+
     &:hover {
       background-color: var(--lightmain-color);
-      transform: scale(1.07);
+      transform: scale(1.05);
     }
   }
 }
