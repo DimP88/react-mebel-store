@@ -1,0 +1,17 @@
+.inptcom {
+  &__wrapper {
+    margin-top: 11px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    border-bottom: 2px solid var(--black-color);
+    padding-bottom: 3px;
+    width: 100%;
+    min-width: 348px;
+  }
+
+  &__field {
+    border: none;
+    outline: none;
+  }
+}

@@ -1,0 +1,42 @@
+.banner {
+  &__img-1 {
+    background: url("../assets/banner11.jpg") center/cover no-repeat;
+    padding: 100px 0 141px 121px;
+  }
+  &__img-2 {
+    background: url("../assets/banner2.jpg") center/cover no-repeat;
+    padding: 100px 0 141px 121px;
+  }
+  &__title {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 105%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+  &__text {
+    font-family: var(--second-family);
+    line-height: 141%;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px !important;
+  height: 30px !important;
+  background: #ffffff;
+  &::after {
+    font-size: 15px !important;
+    color: black;
+  }
+}
+.swiper-button-next {
+  right: 25px !important;
+}
+.swiper-button-prev {
+  left: 25px !important;
+}

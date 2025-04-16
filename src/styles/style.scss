@@ -1,0 +1,101 @@
+@use "header";
+@use "banner";
+@use "hitsale";
+@use "card";
+@use "button";
+@use "footer";
+@use "form";
+@use "productSlider";
+@use "productInfo";
+@use "favorites";
+@use "catalog";
+@use "contact";
+@use "cart";
+@use "checkout";
+@use "inptcom";
+@use "skeleton";
+@use "about";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap");
+
+$main-color: #245462;
+$lightmain-color: #336574;
+$text-color: #414141;
+$white-color: #ffffff;
+$black-color: #000000;
+$grey-color: #f9f9f9;
+$darkgrey-color: #a7a7a7;
+
+$font-family: "Roboto", sans-serif;
+$second-family: "Roboto Condensed", sans-serif;
+$third-family: "Playfair Display", sans-serif;
+$form-family: "Poppins", sans-serif;
+
+:root {
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Roboto Condensed", sans-serif;
+  --third-family: "Playfair Display", sans-serif;
+  --form-family: "Poppins", sans-serif;
+
+  --lightmain-color: #3a6e7e;
+  --main-color: #245462;
+  --text-color: #414141;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --grey-color: #f9f9f9;
+  --darkgrey-color: #d2d2d2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  resize: none;
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+button,
+a {
+  cursor: pointer;
+  border: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

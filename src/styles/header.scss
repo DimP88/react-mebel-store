@@ -1,0 +1,121 @@
+.header {
+  //header top section
+  &__top {
+    background-color: black;
+    padding: 9.5px 0px;
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-menu {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--white-color);
+      transform: scale(1.05);
+      transition: transform 0.2s ease;
+      svg {
+        fill: white;
+      }
+
+      span {
+        display: flex;
+        gap: 10px;
+        color: var(--white-color);
+      }
+    }
+
+    a:hover {
+      color: var(--darkgrey-color);
+      transform: scale(1.1);
+    }
+  }
+  //header center section
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    &-acc {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+
+      a {
+        color: var(--text-color);
+      }
+    }
+
+    &-search {
+      width: 75%;
+      position: relative;
+    }
+    &-glass {
+      position: absolute;
+      top: 50%;
+      left: 2%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &-field {
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      width: 100%;
+      height: 50px;
+      padding: 0 45px;
+    }
+  }
+
+  //header down sectin
+  &__down {
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
+    background: #fff;
+    margin-bottom: 30px;
+
+    &-link {
+      position: relative;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: var(--text-color);
+      gap: 10px;
+      padding: 25px 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--main-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}

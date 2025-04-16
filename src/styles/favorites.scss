@@ -1,0 +1,28 @@
+.favorites {
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 80px;
+    padding-bottom: 60px;
+  }
+
+  &__pagination {
+    padding-top: 100px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    cursor: pointer;
+    li.active {
+      font-weight: bold;
+      color: #fff;
+      background-color: var(--main-color);
+      padding: 1px;
+    }
+  }
+}
