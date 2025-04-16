@@ -1,6 +1,6 @@
 import HeaderTop from "./HeaderTop/HeaderTop";
 import HeaderCenter from "./HeaderCenter/HeaderCenter";
-import Headerdown from "./HeaderDown/Headerdown";
+import Headerdown from "./HeaderDown/HeaderDown";
 
 const Header = () => {
   return (
