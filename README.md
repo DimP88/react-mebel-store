@@ -1,5 +1,12 @@
 # React + Vite
 
+✨ <b>Учебный проект:</b> SPA для мебельного магазина.  
+Использовал:  
+- Управление состоянием: Context API  
+- Маршрутизация: React Router DOM  
+- Формы: React Hook Form  
+- Стили: SCSS-модули  
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
