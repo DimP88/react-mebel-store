@@ -1,5 +1,7 @@
 # React + Vite
 
+https://react-mebel-store-sooty.vercel.app/
+
 ✨ <b>Учебный проект:</b> SPA для мебельного магазина.  
 Использовал:  
 - Управление состоянием: Context API  
