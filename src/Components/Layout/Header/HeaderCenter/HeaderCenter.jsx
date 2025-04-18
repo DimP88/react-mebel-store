@@ -7,9 +7,10 @@ import { useContext, useEffect } from "react";
 import { CustomContext } from "../../../../config/contex/CustomContext";
 import { MdLogout } from "react-icons/md";
 import { UserStatys } from "../../Header/HeaderCenter/UserStatys";
+import BurgerButton from "../../../BurgerButton/BurgerButton";
 
 const HeaderCenter = () => {
-  const { user, logOut, search, setSearch, favorites } =
+  const { user, logOut, search, setSearch, favorites, menuToggle, isMenuOpen } =
     useContext(CustomContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -20,6 +21,11 @@ const HeaderCenter = () => {
 
   return (
     <div className="header__center">
+      <BurgerButton
+        className="header__center-burger"
+        isActive={isMenuOpen}
+        onClick={menuToggle}
+      />
       <Link to="/">
         <img
           className="header__center-logo"
@@ -42,7 +48,7 @@ const HeaderCenter = () => {
           }}
           type="search"
           className="header__center-field"
-          placeholder="Поиск"
+          placeholder="Поиск..."
           value={search}
         />
       </div>

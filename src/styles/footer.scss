@@ -5,12 +5,18 @@
     font-size: 14px;
     line-height: 127%;
     color: var(--black-color);
+    text-align: center;
   }
 
   &__top {
     padding: 10px 0 20px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 750px) {
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: center;
+    }
 
     &-row {
       display: flex;
@@ -28,13 +34,20 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      align-items: center;
       gap: 25px;
+      @media (max-width: 750px) {
+        flex-direction: row;
+      }
       p {
         position: absolute;
         bottom: 50px;
         font-weight: 900;
         font-size: 42px;
         color: var(--black-color);
+        @media (max-width: 750px) {
+          position: static;
+        }
       }
       span {
         font-size: 14px;
@@ -46,6 +59,10 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
   }
   &__bottom {
     padding: 22px;
@@ -60,6 +77,10 @@
       align-items: center;
       justify-content: center;
       gap: 30px;
+      @media (max-width: 620px) {
+        flex-direction: column;
+        gap: 20px;
+      }
 
       span {
         color: var(--white-color);

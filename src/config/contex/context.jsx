@@ -8,6 +8,15 @@ const Context = (props) => {
   const [user, setUser] = useState({ email: "" });
   const [favorites, setFavorites] = useState([]);
   const [search, setSearch] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuToggle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const menuСlose = () => {
+    setIsMenuOpen(false);
+  };
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
@@ -186,6 +195,9 @@ const Context = (props) => {
     addCartCountPlus,
     removeCartCountMinus,
     addOrder,
+    isMenuOpen,
+    menuToggle,
+    menuСlose,
   };
 
   return (
